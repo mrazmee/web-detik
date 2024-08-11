@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>detikTravel</title>
+    <link rel="icon" href="https://cdn.detik.net.id/travel2/images/favicon.ico?v=2024080919447">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo-detiktravel.png" alt="">
+                </div>
+
+                <div id="menuIcon" class="hamburger-menu">
+                    <i class="ph ph-list"></i>
+                </div>
+
+                <div id="listLink" class="parent-link hidden">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Tentang Program</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li class="register"><a href="#" class="register-btn">Registrasi</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <script>
+                const menuIcon = document.getElementById("menuIcon");
+                const listLink = document.getElementById("listLink");
+
+                menuIcon.addEventListener("click", ()=>{
+                    listLink.classList.toggle("hidden");
+                })
+            </script>
+        </header>
+        
+        <main>
+            <section id="home">
+                <div class="left-sect">
+                    <div class="judul">
+                        <img src="Layer 1.png" alt="">
+                    </div>
+    
+                    <div class="button">
+                        <button>TENTANG PROGRAM</button>
+                    </div>
+                </div>
+
+                <div class="right-sect">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-bg="card2.jpg">
+                                <div class="card">
+                                    <img src="https://news.alaskaair.com/wp-content/uploads/2024/02/1000-header.jpg?w=1000" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-bg="card3.jpg">
+                                <div class="card">
+                                    <img src="card2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-bg="https://news.alaskaair.com/wp-content/uploads/2024/02/1000-header.jpg?w=1000">
+                                <div class="card">
+                                    <img src="card3.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- Duplicate slides for seamless looping -->
+                            <div class="swiper-slide" data-bg="card2.jpg">
+                                <div class="card">
+                                    <img src="https://news.alaskaair.com/wp-content/uploads/2024/02/1000-header.jpg?w=1000" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-bg="card3.jpg">
+                                <div class="card">
+                                    <img src="card2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-bg="https://news.alaskaair.com/wp-content/uploads/2024/02/1000-header.jpg?w=1000">
+                                <div class="card">
+                                    <img src="card3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 3, /* Menampilkan tiga kartu sekaligus */
+                            spaceBetween: 10, /* Jarak antar kartu */
+                            centeredSlides: false,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            loop: true, /* Enable infinite loop */
+                            on: {
+                            slideChange: function () {
+                                var activeSlide = document.querySelector('.swiper-slide-active');
+                                if (activeSlide) {
+                                    var bgImage = activeSlide.getAttribute('data-bg');
+                                    if (bgImage) {
+                                        document.querySelector('#home').style.backgroundImage = `linear-gradient(to top, rgba(52, 204, 255) 0, rgba(255, 255, 255, 0) 60%), url(${bgImage})`;
+                                    }
+                                }
+                            },
+                        },
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="bag-kiri">
+                    <div class="foto">
+                        <img src="about.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="bag-kanan">
+                    <div class="text">
+                        <h1>Tentang Program</h1>
+                        <br>
+                        <p>Bergabunglah dalam "Explore Thailand bersama Detiktravel"! Kompetisi ini terbuka bagi pembaca Detiktravel yang ingin menikmati 
+                            perjalanan ke Thailand. Kunjungi destinasi menakjubkan seperti pantai Pak Bia Island dan destinasi lain di Phuket, Thailand. 
+                            Jadi bagian dari perjalanan kami dan menangkan hadiah jalan-jalan yang tak terlupakan!</p>
+                    </div>
+
+                    <div class="butt-about">
+                        <button>DAFTAR SEKARANG</button>
+                    </div>
+
+                    <div class="deadline">
+                        <img src="mekanisme.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section id="berita">
+                <div class="sec-kiri">
+                    <div class="logo-update">
+                        <img src="logo detikupdate.png" alt="">
+                    </div>
+
+                    <div class="dor-img">
+                        <img src="doraemon.jpg" alt="">
+                        <div class="card-berita">
+                            <h2>Warga Thailand Pakai Boneka Doraemon untuk Ritual Pemanggil Hujan</h2>
+                            <p>3 Jam yang lalu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sec-kanan">
+                    <div class="all-berita">
+                        <div class="berita1">
+                            <div class="img-ber">
+                                <img src="berita1.jpg" alt="">
+                            </div>
+
+                            <div class="tulisan">
+                                <div class="judul-ber">
+                                    <h3>Thailand Ngarep Cuan Banyak dari Turis China dan Jepang</h1>
+                                </div>
+                                <p>1 Jam yang lalu</p>
+                            </div>
+                        </div>
+
+                        <div class="berita2">
+                            <div class="img-ber">
+                                <img src="berita2.jpg" alt="">
+                            </div>
+
+                            <div class="tulisan">
+                                <div class="judul-ber">
+                                    <h3>Cahaya Lampu Hiasi Kuil Wat Phra Dhammakaya Thailand Saat Waisak</h1>
+                                </div>
+                                <p>1 Jam yang lalu</p>
+                            </div>
+                        </div>
+
+                        <div class="berita3">
+                            <div class="img-ber">
+                                <img src="berita3.jpg" alt="">
+                            </div>
+
+                            <div class="tulisan">
+                                <div class="judul-ber">
+                                    <h3>Cantiknya Lisa BLACKPINK Berwisata Sejarah di Thailand</h1>
+                                </div>
+                                <p>1 Jam yang lalu</p>
+                            </div>
+                        </div>
+
+                        <div class="butt-ber">
+                            <button>Lihat Berita Lainnya &#x27A1</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section id="footer">
+                <div class="logo-foot">
+                    <img src="log-foot.png" alt="">
+                </div>
+
+                <div class="text-foot">
+                    <p>Bergabunglah dalam "Explore Thailand bersama Detiktravel"! Kompetisi ini terbuka bagi pembaca Detiktravel 
+                        yang ingin menikmati perjalanan ke Thailand. Kunjungi destinasi menakjubkan seperti pantai Pak Bia Island 
+                        dan destinasi lain di Phuket, Thailand. Jadi bagian dari perjalanan kami dan menangkan hadiah jalan-jalan 
+                        yang tak terlupakan!</p>
+                    <img src="socmed.png" alt="">
+                </div>
+
+                <hr>
+
+                <div class="copyright">
+                    <p>Copyright @ 2023 detikcom. All right reserved</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
